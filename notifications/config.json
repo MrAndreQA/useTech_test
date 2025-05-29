@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "UseTech - автотесты",
+    "environment": "",
+    "comment": "",
+    "reportLink": "",
+    "language": "ru",
+    "allureFolder": "",
+    "enableChart": true
+    },
+    "telegram": {
+      "token": "",
+      "chat": "",
+      "replyTo": ""
+    }
+  }
