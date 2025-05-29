@@ -17,7 +17,7 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HomeWorkFastDevelopTest extends TestBase {
+public class HomeWorkFastDevelopTest extends RemoteTestBase {
 
     final SelenideElement
             firstHeaderInMainPage = $("h1", 0),
