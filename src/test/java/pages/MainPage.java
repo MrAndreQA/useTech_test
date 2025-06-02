@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.DisplayName;
 import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.size;
@@ -24,13 +25,13 @@ public class MainPage {
 
     private final ElementsCollection filialsName = $$("h3");
 
-    @DisplayName("Открываем главную страницу")
+    @Step("Открываем главную страницу")
     public MainPage openPage() {
         open(baseUrl);
         return new MainPage();
     }
 
-    @DisplayName("Проверяем текст первого заголовка главной страницы")
+    @Step("Проверяем текст первого заголовка главной страницы")
     public MainPage checkTextInHeader(String textValue) {
         firstHeaderInMainPage.shouldHave(text(textValue));
         return new MainPage();
@@ -49,19 +50,19 @@ public class MainPage {
         return new MainPage();
     }
 
-    @DisplayName("Нажимаем на пункт меню - Услуги")
+    @Step("Нажимаем на пункт меню - Услуги")
     public MainPage clickToServicesBtn() {
         menuButtons_services.click();
         return new MainPage();
     }
 
-    @DisplayName("Нажимаем на пункт меню - Контакты")
+    @Step("Нажимаем на пункт меню - Контакты")
     public MainPage clickToContactsBtn() {
         menuButtons_contacts.click();
         return new MainPage();
     }
 
-    @DisplayName("Нажимаем на пункт меню - Хабр Блог")
+    @Step("Нажимаем на пункт меню - Хабр Блог")
     public MainPage clickToHabrBlogBtn() {
         menuButtons_habrBlog.click();
         return new MainPage();
@@ -76,7 +77,7 @@ public class MainPage {
             "Минск"
     );
 
-    @DisplayName("Проверяем количество городов, где есть филиалы и их названия")
+    @Step("Проверяем количество городов, где есть филиалы и их названия")
     public MainPage checkCountAndNameOfCities() {
         filialsName.shouldHave(size(expectedFilials.size()));
         for (int i = 0; i < expectedFilials.size(); i++) {
