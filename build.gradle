@@ -55,9 +55,3 @@ task basic_test(type: Test) {
         includeTags("basic_test")
     }
 }
-
-task minimal_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("minimal_test")
-    }
-}

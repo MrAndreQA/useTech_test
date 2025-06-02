@@ -33,7 +33,7 @@ public class RemoteTestBase {
         Configuration.browser = browser;
         Configuration.browserVersion = browserVersion;
         Configuration.browserSize = browserSize;
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = "https://usetech.ru/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         setupRemote();
