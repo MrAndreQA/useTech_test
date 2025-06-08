@@ -4,7 +4,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import utils.CheckPages;
@@ -20,7 +19,6 @@ public class HomeWorkFastDevelopTest extends RemoteTestBase {
     }
 
 
-    @Tag("basic_test")
     @DisplayName("UseTech: проверка текста первого заголовка на главной странице сайта")
     @Feature("Раздел - Главная страница ")
     @Story("Главная страница - отображение элементов")
@@ -34,7 +32,6 @@ public class HomeWorkFastDevelopTest extends RemoteTestBase {
     }
 
 
-    @Tag("basic_test")
     @DisplayName("UseTech: проверка текста кнопок меню сайта")
     @Feature("Раздел - Главная страница ")
     @Story("Главная страница - отображение элементов")
@@ -48,7 +45,6 @@ public class HomeWorkFastDevelopTest extends RemoteTestBase {
     }
 
 
-    @Tag("basic_test")
     @DisplayName("UseTech: проверка перехода в раздел Услуги")
     @Feature("Раздел - Главная страница ")
     @Story("Главная страница - переход в разделы сайта")
@@ -63,7 +59,6 @@ public class HomeWorkFastDevelopTest extends RemoteTestBase {
     }
 
 
-    @Tag("basic_test")
     @DisplayName("UseTech: проверка перехода на страницу Блога в Хабре")
     @Feature("Раздел - Главная страница ")
     @Story("Главная страница - переход на внешние ресурсы")
@@ -79,7 +74,6 @@ public class HomeWorkFastDevelopTest extends RemoteTestBase {
     }
 
 
-    @Tag("basic_test")
     @DisplayName("UseTech: на странице 'Контакты' отображаются названия всех 6 городов")
     @Feature("Раздел - Контакты ")
     @Story("Главная страница - переход в разделы сайта")

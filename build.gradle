@@ -49,9 +49,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task basic_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("basic_test")
-    }
-}
