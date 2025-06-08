@@ -31,7 +31,7 @@ public class RemoteTestBase {
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.browserSize = System.getProperty("browserResolution");
-        Configuration.baseUrl = "https://usetech.ru/";
+        Configuration.baseUrl = "https://usetech.ru";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         setupRemote();

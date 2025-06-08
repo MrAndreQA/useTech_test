@@ -4,15 +4,13 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.DisplayName;
-import tests.RemoteTestBase;
-
 import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.CollectionCondition.textsInAnyOrder;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainPage extends RemoteTestBase {
+public class MainPage {
     private final SelenideElement
             firstHeaderInMainPage = $("h1", 0),
             menuButtons_aboutCompany = $("#menu-topbar li", 0),
@@ -28,7 +26,7 @@ public class MainPage extends RemoteTestBase {
 
     @Step("Открываем главную страницу")
     public MainPage openPage() {
-        open();
+        open("/");
         return new MainPage();
     }
 
