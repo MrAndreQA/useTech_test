@@ -13,12 +13,6 @@ public class HomeWorkFastDevelopTest extends RemoteTestBase {
     public MainPage mainPage = new MainPage();
     public CheckPages checkPages = new CheckPages();
 
-    @BeforeEach
-    public void beforeEach() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
-
     @DisplayName("UseTech: проверка текста первого заголовка на главной странице сайта")
     @Feature("Раздел - Главная страница ")
     @Story("Главная страница - отображение элементов")
