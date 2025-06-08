@@ -31,13 +31,12 @@ public class MainPage {
     }
 
     @Step("Проверяем текст первого заголовка главной страницы")
-    public MainPage checkTextInHeader(String textValue) {
+    public void checkTextInHeader(String textValue) {
         firstHeaderInMainPage.shouldHave(text(textValue));
-        return new MainPage();
     }
 
     @DisplayName("Проверяем текст кнопок меню сайта")
-    public MainPage checkTextInMenuButtons() {
+    public void checkTextInMenuButtons() {
         menuButtons_aboutCompany.shouldHave(text("О компании"));
         menuButtons_news.shouldHave(text("Новости"));
         menuButtons_services.shouldHave(text("Услуги"));
@@ -46,7 +45,6 @@ public class MainPage {
         menuButtons_contacts.shouldHave(text("Контакты"));
         menuButtons_career.shouldHave(text("Карьера"));
         menuButtons_habrBlog.shouldHave(text("Habr Блог"));
-        return new MainPage();
     }
 
     @Step("Нажимаем на пункт меню - Услуги")
@@ -77,7 +75,7 @@ public class MainPage {
     );
 
     @Step("Проверяем количество городов, где есть филиалы и их названия")
-    public MainPage checkCountAndNameOfCities() {
+    public void checkCountAndNameOfCities() {
         filialsName.shouldHave(size(expectedFilials.size()));
         for (int i = 0; i < expectedFilials.size(); i++) {
             filialsName.get(i) // Используем элементы из коллекции
@@ -85,6 +83,5 @@ public class MainPage {
                     .shouldHave(exactTextCaseSensitive(expectedFilials.get(i)));
         }
         filialsName.shouldHave(textsInAnyOrder(expectedFilials));
-        return new MainPage();
     }
     }
