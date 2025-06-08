@@ -13,8 +13,6 @@ import static com.codeborne.selenide.WebDriverRunner.isFirefox;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
-    private static final String selenoidRemoteServerUrl = System.getProperty(
-            "selenoidRemoteServerUrl");
 
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] screenshotAs(String attachName) {
@@ -49,7 +47,8 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String videoUrl = "https://" + selenoidRemoteServerUrl + "/video/" + sessionId() + ".mp4";
+        String videoUrl = "https://" + System.getProperty(
+                "selenoidRemoteServerUrl") + "/video/" + sessionId() + ".mp4";
         try {
             return new URL(videoUrl);
         } catch (MalformedURLException e) {

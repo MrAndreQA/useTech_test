@@ -12,13 +12,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class RemoteTestBase {
-    static String selenoidUserLogin = System.getProperty("selenoidUserLogin");
-    static String selenoidUserPassword = System.getProperty("selenoidUserPassword");
-    static String selenoidRemoteServerUrl = System.getProperty(
-            "selenoidRemoteServerUrl");
-    static String browser = System.getProperty("browser");
-    static String browserVersion = System.getProperty("browserVersion");
-    static String browserSize = System.getProperty("browserResolution");
+//    static String selenoidUserLogin = System.getProperty("selenoidUserLogin");
+//    static String selenoidUserPassword = System.getProperty("selenoidUserPassword");
+//    static String selenoidRemoteServerUrl = System.getProperty(
+//            "selenoidRemoteServerUrl");
 
     public static void setupRemote() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -28,14 +25,16 @@ public class RemoteTestBase {
         ));
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = "https://" +
-                selenoidUserLogin + ":" + selenoidUserPassword +"@" + selenoidRemoteServerUrl + "/wd/hub";
+                System.getProperty("selenoidUserLogin") + ":" +
+                System.getProperty("selenoidUserPassword") + "@" +
+                System.getProperty("selenoidRemoteServerUrl") + "/wd/hub";
     }
 
     @BeforeAll
     public static void beforeAll() {
-        Configuration.browser = browser;
-        Configuration.browserVersion = browserVersion;
-        Configuration.browserSize = browserSize;
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.browserSize = System.getProperty("browserResolution");
         Configuration.baseUrl = "https://usetech.ru/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
