@@ -12,10 +12,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class RemoteTestBase {
-//    static String selenoidUserLogin = System.getProperty("selenoidUserLogin");
-//    static String selenoidUserPassword = System.getProperty("selenoidUserPassword");
-//    static String selenoidRemoteServerUrl = System.getProperty(
-//            "selenoidRemoteServerUrl");
 
     public static void setupRemote() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
