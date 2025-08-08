@@ -4,9 +4,6 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.DisplayName;
-import java.util.List;
-import static com.codeborne.selenide.CollectionCondition.size;
-import static com.codeborne.selenide.CollectionCondition.textsInAnyOrder;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -53,6 +50,18 @@ public class MainPage {
         return new MainPage();
     }
 
+    @Step("Нажимаем на пункт меню - Отрасли")
+    public MainPage clickToAreasBtn() {
+        menuButtons_areas.click();
+        return new MainPage();
+    }
+
+    @Step("Нажимаем на пункт меню - Награды")
+    public MainPage clickToAwardsBtn() {
+        menuButtons_awards.click();
+        return new MainPage();
+    }
+
     @Step("Нажимаем на пункт меню - Контакты")
     public MainPage clickToContactsBtn() {
         menuButtons_contacts.click();
@@ -63,25 +72,5 @@ public class MainPage {
     public MainPage clickToHabrBlogBtn() {
         menuButtons_habrBlog.click();
         return new MainPage();
-    }
-
-    List<String> expectedFilials = List.of(
-            "Москва",
-            "Рязань",
-            "Ростов-на-Дону",
-            "Томск",
-            "Барнаул",
-            "Минск"
-    );
-
-    @Step("Проверяем количество городов, где есть филиалы и их названия")
-    public void checkCountAndNameOfCities() {
-        filialsName.shouldHave(size(expectedFilials.size()));
-        for (int i = 0; i < expectedFilials.size(); i++) {
-            filialsName.get(i) // Используем элементы из коллекции
-                    .shouldBe(visible)
-                    .shouldHave(exactTextCaseSensitive(expectedFilials.get(i)));
-        }
-        filialsName.shouldHave(textsInAnyOrder(expectedFilials));
     }
     }

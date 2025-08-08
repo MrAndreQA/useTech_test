@@ -13,10 +13,9 @@ import static com.codeborne.selenide.WebDriverRunner.isFirefox;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
-
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] screenshotAs(String attachName) {
-        return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot)getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
     @Attachment(value = "Page source", type = "text/plain")
@@ -30,7 +29,7 @@ public class Attach {
     }
 
     public static void browserConsoleLogs() {
-        if (isFirefox()) { // Пропустить для Firefox
+        if (isFirefox()) {
             return;
         }
         attachAsText(
@@ -47,8 +46,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String videoUrl = "https://" + System.getProperty(
-                "selenoidRemoteServerUrl") + "/video/" + sessionId() + ".mp4";
+        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
         try {
             return new URL(videoUrl);
         } catch (MalformedURLException e) {
