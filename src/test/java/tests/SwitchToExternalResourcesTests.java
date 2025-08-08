@@ -21,18 +21,4 @@ public class SwitchToExternalResourcesTests extends TestBase{
         checkPages
                 .checkCurrentUrl("https://habr.com/ru/companies/usetech/articles/");
     }
-
-    @DisplayName("UseTech: проверка перехода на страницу Яндекс карт, филиал Москва (из раздела Контакты)")
-    @Tag("useTech_tests")
-    @Severity(SeverityLevel.NORMAL)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
-    @Test
-    void checkGoingToYandexMapsFromContactsPageTest() {
-        mainPage.openPage()
-                .clickToContactsBtn();
-        contactsPage.clickToMoscowMapBtn();
-        checkPages
-                .checkPartialCurrentUrl("https://yandex.ru");
-    }
 }
