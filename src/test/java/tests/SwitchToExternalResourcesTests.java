@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Feature("Раздел - Главная страница ")
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 public class SwitchToExternalResourcesTests extends TestBase{
 
     @DisplayName("UseTech: проверка перехода на страницу Блога в Хабре")
+    @Tag("useTech_tests")
     @Severity(SeverityLevel.NORMAL)
     @Link(value = "UseTech - главная", url = "https://usetech.ru/")
     @Owner("Volodin_AS")
@@ -21,6 +23,7 @@ public class SwitchToExternalResourcesTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода на страницу Яндекс карт, филиал Москва (из раздела Контакты)")
+    @Tag("useTech_tests")
     @Severity(SeverityLevel.NORMAL)
     @Link(value = "UseTech - главная", url = "https://usetech.ru/")
     @Owner("Volodin_AS")

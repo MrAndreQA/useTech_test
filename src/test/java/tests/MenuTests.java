@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Feature("Раздел - Основное меню сайта")
@@ -19,6 +20,7 @@ public class MenuTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода в раздел Отрасли - через меню сайта")
+    @Tag("useTech_tests")
     @Severity(SeverityLevel.MINOR)
     @Link(value = "UseTech - главная", url = "https://usetech.ru/")
     @Owner("Volodin_AS")
@@ -30,6 +32,7 @@ public class MenuTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода в раздел Награды - через меню сайта")
+    @Tag("useTech_tests")
     @Severity(SeverityLevel.MINOR)
     @Link(value = "UseTech - главная", url = "https://usetech.ru/")
     @Owner("Volodin_AS")
@@ -41,6 +44,7 @@ public class MenuTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода в раздел Услуги - через меню сайта")
+    @Tag("useTech_tests")
     @Severity(SeverityLevel.CRITICAL)
     @Link(value = "UseTech - главная", url = "https://usetech.ru/")
     @Owner("Volodin_AS")

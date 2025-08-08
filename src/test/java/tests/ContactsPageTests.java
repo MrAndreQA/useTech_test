@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Feature("Раздел - Контакты ")
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 public class ContactsPageTests extends TestBase {
 
     @DisplayName("UseTech: на странице 'Контакты' отображаются названия всех 6 городов")
+    @Tag("useTech_tests")
     @Severity(SeverityLevel.NORMAL)
     @Link(value = "UseTech - главная", url = "https://usetech.ru/")
     @Owner("Volodin_AS")
