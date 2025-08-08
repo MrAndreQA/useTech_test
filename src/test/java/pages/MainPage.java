@@ -68,6 +68,12 @@ public class MainPage {
         return new MainPage();
     }
 
+    @Step("Нажимаем на пункт меню - Карьера")
+    public MainPage clickToCareerBtn() {
+        menuButtons_career.click();
+        return new MainPage();
+    }
+
     @Step("Нажимаем на пункт меню - Хабр Блог")
     public MainPage clickToHabrBlogBtn() {
         menuButtons_habrBlog.click();

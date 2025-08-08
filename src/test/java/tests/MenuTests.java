@@ -54,4 +54,16 @@ public class MenuTests extends TestBase{
                 .clickToServicesBtn();
         checkPages.checkCurrentUrl("https://usetech.ru/uslugi/");
     }
+
+    @DisplayName("UseTech: проверка перехода в раздел Карьера - через меню сайта")
+    @Tag("useTech_tests")
+    @Severity(SeverityLevel.NORMAL)
+    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
+    @Owner("Volodin_AS")
+    @Test
+    void checkSwitchToCareerSectionTest() {
+        mainPage.openPage()
+                .clickToCareerBtn();
+        checkPages.checkCurrentUrl("https://career.usetech.ru/");
+    }
 }
