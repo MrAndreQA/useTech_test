@@ -7,12 +7,13 @@ import org.junit.jupiter.api.Test;
 
 @Feature("Раздел - Основное меню сайта")
 @Story("Основное меню - отображение элементов")
+@Link(value = "UseTech - главная", url = "https://usetech.ru/")
+@Owner("Volodin_AS")
+@Tag("useTech_tests")
 public class MenuTests extends TestBase{
 
     @DisplayName("UseTech: проверка текста кнопок меню сайта")
     @Severity(SeverityLevel.NORMAL)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
     @Test
     void checkCorrectSecondHeaderInMainPageTest() {
         mainPage.openPage()
@@ -20,10 +21,7 @@ public class MenuTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода в раздел Отрасли - через меню сайта")
-    @Tag("useTech_tests")
     @Severity(SeverityLevel.MINOR)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
     @Test
     void checkSwitchToAreasSectionTest() {
         mainPage.openPage()
@@ -32,10 +30,7 @@ public class MenuTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода в раздел Награды - через меню сайта")
-    @Tag("useTech_tests")
     @Severity(SeverityLevel.MINOR)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
     @Test
     void checkSwitchToAwardsSectionTest() {
         mainPage.openPage()
@@ -44,10 +39,7 @@ public class MenuTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода в раздел Услуги - через меню сайта")
-    @Tag("useTech_tests")
     @Severity(SeverityLevel.CRITICAL)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
     @Test
     void checkSwitchToServicesSectionTest() {
         mainPage.openPage()
@@ -56,10 +48,7 @@ public class MenuTests extends TestBase{
     }
 
     @DisplayName("UseTech: проверка перехода в раздел Карьера - через меню сайта")
-    @Tag("useTech_tests")
     @Severity(SeverityLevel.NORMAL)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
     @Test
     void checkSwitchToCareerSectionTest() {
         mainPage.openPage()

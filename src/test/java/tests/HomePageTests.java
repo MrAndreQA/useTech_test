@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 
 @Feature("Раздел - Главная страница ")
 @Story("Главная страница - отображение элементов")
+@Tag("useTech_tests")
+@Link(value = "UseTech - главная", url = "https://usetech.ru/")
+@Owner("Volodin_AS")
+@Severity(SeverityLevel.NORMAL)
 public class HomePageTests extends TestBase {
 
     @DisplayName("UseTech: проверка текста первого заголовка на главной странице сайта")
-    @Tag("useTech_tests")
-    @Severity(SeverityLevel.NORMAL)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
     @Test
     void checkCorrectFirstHeaderInMainPageTest() {
         mainPage.openPage()

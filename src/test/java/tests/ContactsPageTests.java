@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 
 @Feature("Раздел - Контакты ")
 @Story("Главная страница - переход в разделы сайта")
+@Owner("Volodin_AS")
+@Tag("useTech_tests")
+@Link(value = "UseTech - главная", url = "https://usetech.ru/")
+@Severity(SeverityLevel.NORMAL)
 public class ContactsPageTests extends TestBase {
 
     @DisplayName("UseTech: на странице 'Контакты' отображаются названия всех 6 городов")
-    @Tag("useTech_tests")
-    @Severity(SeverityLevel.NORMAL)
-    @Link(value = "UseTech - главная", url = "https://usetech.ru/")
-    @Owner("Volodin_AS")
     @Test
     void checkAllFilialsIsVisibleTest() {
         mainPage.openPage()
