@@ -26,7 +26,6 @@ public interface WebConfig extends Config {
     String getBaseUrl();
 
     @Key("remoteUrl")
-    //@DefaultValue("selenoid.autotests.cloud") //TODO поменять,  ранее было @DefaultValue("https://usetech.ru")
     String getRemoteUrl();
 
     @Key("isRemote")

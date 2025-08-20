@@ -20,6 +20,7 @@ public class ProjectConfig {
         Configuration.browserVersion = webConfig.getBrowserVersion();
         Configuration.browserSize = webConfig.getBrowserSize();
 
+
         if (webConfig.isRemote()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
