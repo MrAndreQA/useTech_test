@@ -19,8 +19,6 @@ public class MainPage {
             menuButtons_career = $("#menu-topbar li", 6),
             menuButtons_habrBlog = $("#menu-topbar li", 7);
 
-    private final ElementsCollection filialsName = $$("h3");
-
     @Step("Открываем главную страницу")
     public MainPage openPage() {
         open("/");
